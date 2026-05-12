@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admissions | Apply to Abela Pre &amp; Primary School</title>
-  <meta name="description" content="Admissions information, process, school visit, documents and sample fees for Abela Pre &amp; Primary School." />
+  <meta name="description" content="Admissions information, process, school visit, documents and indicative fees for Abela Pre &amp; Primary School." />
   <meta name="theme-color" content="#047857" />
   <meta property="og:title" content="Admissions | Apply to Abela Pre &amp; Primary School" />
-  <meta property="og:description" content="Admissions information, process, school visit, documents and sample fees for Abela Pre &amp; Primary School." />
+  <meta property="og:description" content="Admissions information, process, school visit, documents and indicative fees for Abela Pre &amp; Primary School." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,32 +43,75 @@
 <body class="bg-abela-cream text-slate-900 antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
   
-<header class="site-header">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-    <a href="index.html" class="group flex items-center gap-3" aria-label="Abela Pre & Primary School home">
-      <span class="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-700 text-lg font-black text-white shadow-lg shadow-emerald-900/20 ring-1 ring-white/30">A</span>
-      <span>
-        <span class="block text-sm font-black uppercase tracking-[0.22em] text-emerald-900">Abela</span>
-        <span class="block text-xs font-semibold text-slate-500">Pre & Primary School</span>
+<header id="siteHeader" class="site-header sticky top-0 z-50 border-b border-emerald-900/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <a href="index.html" class="group flex min-w-0 items-center gap-3" aria-label="Abela Pre & Primary School home">
+      <span class="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-emerald-800 text-base font-black text-white shadow-sm ring-1 ring-emerald-900/10">A</span>
+      <span class="min-w-0">
+        <span class="block truncate text-sm font-black uppercase tracking-[0.2em] text-emerald-900">Abela</span>
+        <span class="block truncate text-[11px] font-semibold text-slate-500">Pre & Primary School</span>
       </span>
     </a>
-    <div class="hidden items-center gap-1 xl:flex">
-      <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="academics.html">Academics</a><a class="nav-link active" href="admissions.html">Admissions</a><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="school-life.html">School Life</a><a class="nav-link" href="gallery.html">Gallery</a><a class="nav-link" href="photo-library.html">Photo Library</a><a class="nav-link" href="portal.html">Portal</a><a class="nav-link" href="contact.html">Contact</a>
+
+    <div class="hidden xl:flex xl:items-center xl:gap-1">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="academics.html">Academics</a>
+      <a class="nav-link" href="admissions.html">Admissions</a>
+      <a class="nav-link" href="school-life.html">School Life</a>
+      <a class="nav-link" href="gallery.html">Gallery</a>
     </div>
-    <div class="hidden items-center gap-3 xl:flex">
-      <a href="admissions.html" class="btn btn-ghost">Admissions</a>
+
+    <div class="hidden xl:flex xl:items-center xl:gap-2">
+      <div class="relative" data-more-wrap>
+        <button type="button" class="nav-link" id="moreMenuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="moreMenu">More ▾</button>
+        <div id="moreMenu" class="absolute right-0 mt-2 hidden w-52 rounded-2xl border border-emerald-900/10 bg-white p-2 shadow-xl" role="menu" aria-label="More pages">
+          <a role="menuitem" class="mobile-link" href="fees.html">Fees</a>
+          <a role="menuitem" class="mobile-link" href="teachers.html">Teachers</a>
+          <a role="menuitem" class="mobile-link" href="photo-library.html">Photo Library</a>
+          <a role="menuitem" class="mobile-link" href="news.html">News</a>
+          <a role="menuitem" class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a href="portal.html" class="btn btn-ghost">Parent Portal</a>
       <a href="apply.html" class="btn btn-primary">Apply Now</a>
     </div>
+
     <button id="menuBtn" class="menu-button xl:hidden" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
+      <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
     </button>
   </nav>
-  <div id="mobileMenu" class="mobile-menu xl:hidden" hidden>
-    <div class="mx-auto grid max-w-7xl gap-2 px-4 pb-5 sm:px-6">
-      <a class="mobile-link" href="index.html">Home</a><a class="mobile-link" href="about.html">About</a><a class="mobile-link" href="academics.html">Academics</a><a class="mobile-link active" href="admissions.html">Admissions</a><a class="mobile-link" href="fees.html">Fees</a><a class="mobile-link" href="school-life.html">School Life</a><a class="mobile-link" href="gallery.html">Gallery</a><a class="mobile-link" href="photo-library.html">Photo Library</a><a class="mobile-link" href="portal.html">Portal</a><a class="mobile-link" href="contact.html">Contact</a><a class="mobile-link" href="teachers.html">Teachers</a><a class="mobile-link" href="news.html">News</a>
-      <a href="apply.html" class="btn btn-primary mt-2 w-full justify-center">Start Admission Application</a>
+
+  <div id="mobileMenu" class="mobile-menu fixed inset-x-0 top-[72px] bottom-0 z-40 overflow-y-auto bg-white/95 px-4 pb-6 pt-4 backdrop-blur xl:hidden" hidden>
+    <div class="mx-auto grid max-w-2xl gap-4">
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Main</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="index.html">Home</a><a class="mobile-link" href="about.html">About</a><a class="mobile-link" href="academics.html">Academics</a><a class="mobile-link" href="school-life.html">School Life</a><a class="mobile-link" href="gallery.html">Gallery</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Admissions</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="admissions.html">Admissions</a><a class="mobile-link" href="fees.html">Fees</a><a class="mobile-link" href="apply.html">Apply</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">School</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="teachers.html">Teachers</a><a class="mobile-link" href="news.html">News</a><a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Resources</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="photo-library.html">Photo Library</a><a class="mobile-link" href="portal.html">Parent Portal</a>
+        </div>
+      </section>
+      <div class="mt-2 grid gap-2 sm:grid-cols-2">
+        <a href="apply.html" class="btn btn-primary w-full justify-center">Apply Now</a>
+        <a href="portal.html" class="btn btn-ghost w-full justify-center">Parent Portal</a>
+      </div>
     </div>
   </div>
 </header>
@@ -83,14 +126,14 @@
       <p>Start online, visit the school, complete learner assessment and receive admission guidance from the office.</p>
       <div class="mt-8 flex flex-col gap-3 sm:flex-row"><a href="apply.html" class="btn btn-primary btn-xl">Click Here to Apply</a><a href="contact.html" class="btn btn-outline btn-xl">Book a Visit</a></div>
     </div>
-    <img class="reveal h-[420px] w-full rounded-[2rem] object-cover shadow-glow" src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Child writing during admission readiness activity" loading="lazy" />
+    <img class="reveal h-[420px] w-full rounded-xl object-cover shadow-glow" src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1200&q=80" alt="Child writing during admission readiness activity" loading="lazy" />
   </div>
 </section>
 <section class="section-padding bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="section-heading reveal"><span class="eyebrow">Admission journey</span><h2>Simple, clear and parent-friendly.</h2><p>The frontend now simulates a serious admission process before backend integration.</p></div>
+    <div class="section-heading reveal"><span class="eyebrow">Admission journey</span><h2>Simple, clear and parent-friendly.</h2><p>Our admissions process is designed to be clear, structured and parent-friendly.</p></div>
     <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-      <article class="step-card reveal"><span>01</span><h3>Apply Online</h3><p>Create a parent account and submit learner details through the demo form.</p></article>
+      <article class="step-card reveal"><span>01</span><h3>Apply Online</h3><p>Create a parent account and submit learner details through the application form.</p></article>
       <article class="step-card reveal"><span>02</span><h3>School Visit</h3><p>Tour the school, meet admissions staff and understand expectations.</p></article>
       <article class="step-card reveal"><span>03</span><h3>Readiness Check</h3><p>Age-appropriate interaction or assessment for correct class placement.</p></article>
       <article class="step-card reveal"><span>04</span><h3>Confirmation</h3><p>Receive admission status, fee guidance and joining instructions.</p></article>
@@ -107,7 +150,7 @@
 <section class="section-padding bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-      <div class="reveal"><span class="eyebrow">Fees overview</span><h2 class="mt-4 font-display text-4xl font-bold">Sample admission fees table.</h2><p class="mt-3 text-slate-600">Replace these demo figures with official Abela fees before launch.</p></div>
+      <div class="reveal"><span class="eyebrow">Fees overview</span><h2 class="mt-4 font-display text-4xl font-bold">Indicative admission fee guide.</h2><p class="mt-3 text-slate-600">Please confirm final fees with the school office, as term and service selections may vary.</p></div>
       <a href="fees.html" class="btn btn-outline reveal">View full fees page</a>
     </div>
     <div class="mt-8 overflow-hidden rounded-[1.5rem] border border-emerald-900/10 bg-white shadow-sm reveal">
@@ -153,7 +196,7 @@
       <a class="footer-link" href="admissions.html">How to Join</a>
       <a class="footer-link" href="fees.html">Fees Structure</a>
       <a class="footer-link" href="apply.html">Apply Online</a>
-      <a class="footer-link" href="portal.html">Parent Portal Demo</a>
+      <a class="footer-link" href="portal.html">Parent Portal</a>
       <a class="footer-link" href="news.html">News & Updates</a>
     </div>
     <div>
@@ -165,11 +208,12 @@
     </div>
   </div>
   <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-slate-400">
-    © <span data-year></span> Abela Pre & Primary School. Version 3 frontend prototype ready for backend integration.
+    © <span data-year></span> Abela Pre & Primary School. Abela Pre & Primary School · Mkuranga, Pwani, Tanzania.
   </div>
 </footer>
 <button id="topBtn" class="top-button" type="button" aria-label="Scroll to top">↑</button>
 
+  <script src="assets/js/admissions.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
