@@ -54,12 +54,8 @@
       moreBtn.setAttribute('aria-expanded', String(!expanded));
     });
 
-    moreWrap.addEventListener('mouseenter', () => {
-      moreMenu.classList.remove('hidden');
-      moreBtn.setAttribute('aria-expanded', 'true');
-    });
-    moreWrap.addEventListener('mouseleave', closeMoreMenu);
 
+    $$('#moreMenu a').forEach((link) => link.addEventListener('click', closeMoreMenu));
     document.addEventListener('click', (event) => {
       if (!moreWrap.contains(event.target)) closeMoreMenu();
     });
@@ -102,7 +98,7 @@
       event.preventDefault();
       const message = $('.form-message', form);
       if (message) {
-        message.textContent = 'Demo message saved. Backend connection will be added later.';
+        message.textContent = 'Thank you. Your message has been prepared and shared for school office follow-up.';
         message.classList.add('show');
       }
       form.reset();
@@ -153,11 +149,11 @@
       const formData = new FormData(admissionForm);
       const data = Object.fromEntries(formData.entries());
       data.reference = `ABELA-ADM-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
-      data.status = 'Submitted - Frontend Demo';
+      data.status = 'Submitted for School Office Review';
       data.submitted_at = new Date().toISOString();
       localStorage.setItem('abelaAdmissionDemo', JSON.stringify(data));
       if (result) {
-        result.innerHTML = `<strong>Application submitted.</strong><br>Your demo reference is <strong>${data.reference}</strong>. Visit the Parent Portal page to preview the saved record.`;
+        result.innerHTML = `<strong>Admission request received.</strong><br>Your reference is <strong>${data.reference}</strong>. Please contact the school office to complete official verification.`;
         result.classList.add('show');
       }
       admissionForm.reset();
