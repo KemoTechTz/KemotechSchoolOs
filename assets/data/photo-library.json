@@ -1,0 +1,83 @@
+{
+  "project": "Abela Pre & Primary School V3 photo library",
+  "rules": [
+    "Use free/paid stock images only when the license allows school website usage.",
+    "Do not copy real Feza, Aga Khan, IST, or Braeburn student photos without written permission.",
+    "Replace all remote placeholders with real Abela photos before production launch."
+  ],
+  "free_sources": [
+    {
+      "name": "Pexels Tanzania Student",
+      "url": "https://www.pexels.com/search/tanzania%20student/",
+      "note": "Free stock source; verify each image before production use."
+    },
+    {
+      "name": "Pexels Tanzanian Student",
+      "url": "https://www.pexels.com/search/tanzanian%20student/",
+      "note": "Useful for classroom and student study images."
+    },
+    {
+      "name": "Unsplash Tanzania Kinder",
+      "url": "https://unsplash.com/photos/a-group-of-children-standing-next-to-each-other-Lfp-LzhQeDU",
+      "note": "Tanzania-tagged image under Unsplash license."
+    },
+    {
+      "name": "Unsplash African School",
+      "url": "https://unsplash.com/s/photos/african-school",
+      "note": "Good fallback for classroom/education visuals."
+    }
+  ],
+  "paid_sources": [
+    {
+      "name": "Getty Tanzania School",
+      "url": "https://www.gettyimages.com/photos/tanzania-school",
+      "note": "Premium paid/licensed Tanzania school imagery."
+    },
+    {
+      "name": "Shutterstock Tanzania Children School",
+      "url": "https://www.shutterstock.com/search/tanzania-children-school",
+      "note": "Paid stock library with Tanzania-specific images."
+    },
+    {
+      "name": "Alamy Primary School in Tanzania",
+      "url": "https://www.alamy.com/stock-photo/primary-school-in-tanzania.html",
+      "note": "Rights-managed and royalty-free options."
+    }
+  ],
+  "inspiration_only": [
+    {
+      "name": "Feza Schools",
+      "url": "https://fezaschools.org/",
+      "note": "Premium campus and academic excellence inspiration only."
+    },
+    {
+      "name": "Aga Khan Nursery and Primary School",
+      "url": "https://www.agakhanschools.org/Tanzania/AKNPSD/Index",
+      "note": "Premium early years/primary presentation inspiration only."
+    },
+    {
+      "name": "International School of Tanganyika",
+      "url": "https://www.istafrica.co.tz/",
+      "note": "International-school layout and parent journey inspiration only."
+    },
+    {
+      "name": "Braeburn Dar es Salaam",
+      "url": "https://dar.braeburn.com/",
+      "note": "British international school structure and premium copy inspiration only."
+    }
+  ],
+  "shoot_list": [
+    "Hero classroom",
+    "Uniform portraits",
+    "Teacher helping learner",
+    "Reading corner",
+    "Admissions visit",
+    "Assembly",
+    "Playground",
+    "Transport",
+    "Meals",
+    "ICT learning",
+    "Staff portraits",
+    "Campus exterior"
+  ]
+}
