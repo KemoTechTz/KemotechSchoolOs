@@ -5,16 +5,79 @@
   const year = $('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
 
+  const siteHeader = $('#siteHeader');
+  const updateHeaderScroll = () => {
+    if (!siteHeader) return;
+    siteHeader.classList.toggle('shadow-md', window.scrollY > 10);
+    siteHeader.classList.toggle('bg-white/90', window.scrollY > 10);
+  };
+  window.addEventListener('scroll', updateHeaderScroll, { passive: true });
+  updateHeaderScroll();
+
   const menuBtn = $('#menuBtn');
   const mobileMenu = $('#mobileMenu');
+  const moreWrap = $('[data-more-wrap]');
+  const moreBtn = $('#moreMenuBtn');
+  const moreMenu = $('#moreMenu');
+
+  const closeMobileMenu = () => {
+    if (!mobileMenu || !menuBtn) return;
+    mobileMenu.hidden = true;
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open navigation menu');
+    document.body.classList.remove('overflow-hidden');
+  };
+
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
-      const open = mobileMenu.hasAttribute('hidden');
-      mobileMenu.toggleAttribute('hidden', !open);
-      menuBtn.setAttribute('aria-expanded', String(open));
-      menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      const willOpen = mobileMenu.hidden;
+      mobileMenu.hidden = !willOpen;
+      menuBtn.setAttribute('aria-expanded', String(willOpen));
+      menuBtn.setAttribute('aria-label', willOpen ? 'Close navigation menu' : 'Open navigation menu');
+      document.body.classList.toggle('overflow-hidden', willOpen);
+    });
+
+    $$('#mobileMenu a').forEach((link) => link.addEventListener('click', closeMobileMenu));
+  }
+
+  const closeMoreMenu = () => {
+    if (!moreMenu || !moreBtn) return;
+    moreMenu.classList.add('hidden');
+    moreBtn.setAttribute('aria-expanded', 'false');
+  };
+
+  if (moreBtn && moreMenu && moreWrap) {
+    moreBtn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const expanded = moreBtn.getAttribute('aria-expanded') === 'true';
+      moreMenu.classList.toggle('hidden', expanded);
+      moreBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+
+    moreWrap.addEventListener('mouseenter', () => {
+      moreMenu.classList.remove('hidden');
+      moreBtn.setAttribute('aria-expanded', 'true');
+    });
+    moreWrap.addEventListener('mouseleave', closeMoreMenu);
+
+    document.addEventListener('click', (event) => {
+      if (!moreWrap.contains(event.target)) closeMoreMenu();
     });
   }
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMoreMenu();
+      closeMobileMenu();
+    }
+  });
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  $$('a.nav-link, a.mobile-link').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href === currentPage) link.classList.add('active');
+    else link.classList.remove('active');
+  });
 
   const revealItems = $$('.reveal');
   if ('IntersectionObserver' in window) {
@@ -27,16 +90,13 @@
       });
     }, { threshold: 0.12 });
     revealItems.forEach((item) => observer.observe(item));
-  } else {
-    revealItems.forEach((item) => item.classList.add('visible'));
-  }
+  } else revealItems.forEach((item) => item.classList.add('visible'));
 
   const topBtn = $('#topBtn');
   if (topBtn) {
     window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 500));
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
-
   $$('[data-demo-form]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -121,9 +181,7 @@
           <p><strong>Learner:</strong><br>${data.child_name || 'Not provided'} · ${data.applying_class || 'Class not selected'}</p>
         </div>`;
       if (portalApplications) portalApplications.textContent = '1';
-    } else if (portalApplications) {
-      portalApplications.textContent = '0';
-    }
+    } else if (portalApplications) portalApplications.textContent = '0';
   }
 
   const filterWrap = $('[data-gallery-filters]');
