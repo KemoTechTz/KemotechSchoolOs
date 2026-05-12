@@ -1,0 +1,12 @@
+{
+  "currency":"TZS",
+  "updated_note":"Sample fee structure for frontend demo. Confirm official rates with Abela school office.",
+  "items":[
+    {"name":"Admission Fee","amount":"250,000"},
+    {"name":"Pre-Primary (per term)","amount":"650,000"},
+    {"name":"Standard I-IV (per term)","amount":"780,000"},
+    {"name":"Standard V-VI (per term)","amount":"850,000"},
+    {"name":"Meals (placeholder)","amount":"120,000"},
+    {"name":"Transport (placeholder)","amount":"To be confirmed by route"}
+  ]
+}
