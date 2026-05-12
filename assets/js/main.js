@@ -93,7 +93,7 @@
     window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 500));
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
-  $$('[data-demo-form]').forEach((form) => {
+  $$('[data-contact-form]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const message = $('.form-message', form);
