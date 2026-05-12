@@ -5,10 +5,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photo Library | Abela Pre &amp; Primary School V3</title>
+  <title>Image Guide | Abela Pre &amp; Primary School </title>
   <meta name="description" content="Curated photo library and image sourcing guide for Abela Pre &amp; Primary School in Mkuranga, Pwani, Tanzania." />
   <meta name="theme-color" content="#047857" />
-  <meta property="og:title" content="Photo Library | Abela Pre &amp; Primary School V3" />
+  <meta property="og:title" content="Image Guide | Abela Pre &amp; Primary School " />
   <meta property="og:description" content="Curated photo library, source links, licensing notes and photoshoot shot list for a premium Tanzanian school website." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80" />
@@ -44,32 +44,75 @@
 </head>
 <body class="bg-abela-cream text-slate-900 antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Main navigation">
-    <a href="index.html" class="group flex items-center gap-3" aria-label="Abela Pre & Primary School home">
-      <span class="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-700 text-lg font-black text-white shadow-lg shadow-emerald-900/20 ring-1 ring-white/30">A</span>
-      <span>
-        <span class="block text-sm font-black uppercase tracking-[0.22em] text-emerald-900">Abela</span>
-        <span class="block text-xs font-semibold text-slate-500">Pre & Primary School</span>
+  <header id="siteHeader" class="site-header sticky top-0 z-50 border-b border-emerald-900/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <a href="index.html" class="group flex min-w-0 items-center gap-3" aria-label="Abela Pre & Primary School home">
+      <span class="grid h-11 w-11 flex-none place-items-center rounded-2xl bg-emerald-800 text-base font-black text-white shadow-sm ring-1 ring-emerald-900/10">A</span>
+      <span class="min-w-0">
+        <span class="block truncate text-sm font-black uppercase tracking-[0.2em] text-emerald-900">Abela</span>
+        <span class="block truncate text-[11px] font-semibold text-slate-500">Pre & Primary School</span>
       </span>
     </a>
-    <div class="hidden items-center gap-1 xl:flex">
-      <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="academics.html">Academics</a><a class="nav-link" href="admissions.html">Admissions</a><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="school-life.html">School Life</a><a class="nav-link" href="gallery.html">Gallery</a><a class="nav-link active" href="photo-library.html">Photo Library</a><a class="nav-link" href="portal.html">Portal</a><a class="nav-link" href="contact.html">Contact</a>
+
+    <div class="hidden xl:flex xl:items-center xl:gap-1">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="academics.html">Academics</a>
+      <a class="nav-link" href="admissions.html">Admissions</a>
+      <a class="nav-link" href="school-life.html">Life at Abela</a>
+      <a class="nav-link" href="gallery.html">Gallery</a>
     </div>
-    <div class="hidden items-center gap-3 xl:flex">
-      <a href="admissions.html" class="btn btn-ghost">Admissions</a>
+
+    <div class="hidden xl:flex xl:items-center xl:gap-2">
+      <div class="relative" data-more-wrap>
+        <button type="button" class="nav-link" id="moreMenuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="moreMenu">More ▾</button>
+        <div id="moreMenu" class="absolute right-0 mt-2 hidden w-52 rounded-2xl border border-emerald-900/10 bg-white p-2 shadow-xl" role="menu" aria-label="More pages">
+          <a role="menuitem" class="mobile-link" href="fees.html">Fees</a>
+          <a role="menuitem" class="mobile-link" href="teachers.html">Teachers</a>
+          <a role="menuitem" class="mobile-link" href="photo-library.html">Image Guide</a>
+          <a role="menuitem" class="mobile-link" href="news.html">News & Notices</a>
+          <a role="menuitem" class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a href="portal.html" class="btn btn-ghost">Parent Access</a>
       <a href="apply.html" class="btn btn-primary">Apply Now</a>
     </div>
+
     <button id="menuBtn" class="menu-button xl:hidden" type="button" aria-label="Open navigation menu" aria-controls="mobileMenu" aria-expanded="false">
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
+      <span class="menu-line"></span><span class="menu-line"></span><span class="menu-line"></span>
     </button>
   </nav>
-  <div id="mobileMenu" class="mobile-menu xl:hidden" hidden>
-    <div class="mx-auto grid max-w-7xl gap-2 px-4 pb-5 sm:px-6">
-      <a class="mobile-link" href="index.html">Home</a><a class="mobile-link" href="about.html">About</a><a class="mobile-link" href="academics.html">Academics</a><a class="mobile-link" href="admissions.html">Admissions</a><a class="mobile-link" href="fees.html">Fees</a><a class="mobile-link" href="school-life.html">School Life</a><a class="mobile-link" href="gallery.html">Gallery</a><a class="mobile-link active" href="photo-library.html">Photo Library</a><a class="mobile-link" href="portal.html">Portal</a><a class="mobile-link" href="contact.html">Contact</a><a class="mobile-link" href="teachers.html">Teachers</a><a class="mobile-link" href="news.html">News</a>
-      <a href="apply.html" class="btn btn-primary mt-2 w-full justify-center">Start Admission Application</a>
+
+  <div id="mobileMenu" class="mobile-menu fixed inset-x-0 top-[72px] bottom-0 z-40 overflow-y-auto bg-white/95 px-4 pb-6 pt-4 backdrop-blur xl:hidden" hidden>
+    <div class="mx-auto grid max-w-2xl gap-4">
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Main</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="index.html">Home</a><a class="mobile-link" href="about.html">About</a><a class="mobile-link" href="academics.html">Academics</a><a class="mobile-link" href="school-life.html">Life at Abela</a><a class="mobile-link" href="gallery.html">Gallery</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Admissions</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="admissions.html">Admissions</a><a class="mobile-link" href="fees.html">Fees</a><a class="mobile-link" href="apply.html">Apply</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">School</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="teachers.html">Teachers</a><a class="mobile-link" href="news.html">News & Notices</a><a class="mobile-link" href="contact.html">Contact</a>
+        </div>
+      </section>
+      <section>
+        <p class="px-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Resources</p>
+        <div class="mt-2 grid gap-1">
+          <a class="mobile-link" href="photo-library.html">Image Guide</a><a class="mobile-link" href="portal.html">Parent Access</a>
+        </div>
+      </section>
+      <div class="mt-2 grid gap-2 sm:grid-cols-2">
+        <a href="apply.html" class="btn btn-primary w-full justify-center">Apply Now</a>
+        <a href="portal.html" class="btn btn-ghost w-full justify-center">Parent Access</a>
+      </div>
     </div>
   </div>
 </header>
@@ -78,7 +121,7 @@
       <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(214,168,63,.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(4,120,87,.28),transparent_36%)]"></div>
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:py-24">
         <div class="reveal">
-          <span class="eyebrow">V3 Photo Library</span>
+          <span class="eyebrow">Image Direction</span>
           <h1 class="mt-5 max-w-4xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-slate-950 sm:text-6xl">Premium images without copyright risk.</h1>
           <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">A curated image system for Abela: free stock links, premium paid sources, Feza/Aga Khan/IST/Braeburn inspiration references and a real photoshoot plan for Mkuranga, Pwani.</p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -87,8 +130,8 @@
           </div>
         </div>
         <div class="reveal grid gap-4 sm:grid-cols-2">
-          <article class="photo-card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Classroom learning placeholder"><div class="p-5"><span class="license-badge license-free">Free placeholder</span><h3 class="mt-4">Classroom hero</h3><p>Use as a temporary visual until Abela has real pupils/campus photos.</p></div></article>
-          <article class="photo-card mt-0 sm:mt-10"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80" alt="Students writing in a classroom placeholder"><div class="p-5"><span class="license-badge license-free">Free placeholder</span><h3 class="mt-4">Academic focus</h3><p>Good for academics, reading culture and learning outcome sections.</p></div></article>
+          <article class="photo-card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Classroom learning profile"><div class="p-5"><span class="license-badge license-free">Free profile</span><h3 class="mt-4">Classroom hero</h3><p>Useful for concept direction until official Abela photography is available.</p></div></article>
+          <article class="photo-card mt-0 sm:mt-10"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80" alt="Students writing in a classroom profile"><div class="p-5"><span class="license-badge license-free">Free profile</span><h3 class="mt-4">Academic focus</h3><p>Good for academics, reading culture and learning outcome sections.</p></div></article>
         </div>
       </div>
     </section>
@@ -101,7 +144,7 @@
           <p>This library separates usable stock sources from inspiration-only school references.</p>
         </div>
         <div class="mt-10 grid gap-5 md:grid-cols-3">
-          <div class="source-card reveal"><span class="license-badge license-free">Can use</span><h3 class="mt-4">Free stock</h3><p>Pexels and Unsplash can be used for mockups and often commercial websites, but always verify the individual license before launch.</p></div>
+          <div class="source-card reveal"><span class="license-badge license-free">Can use</span><h3 class="mt-4">Free stock</h3><p>Pexels and Unsplash offer practical starting images. Always confirm each license before publication.</p></div>
           <div class="source-card reveal"><span class="license-badge license-paid">Can buy</span><h3 class="mt-4">Premium stock</h3><p>Getty, Shutterstock and Alamy give higher-quality Tanzania-specific school photos through paid licensing.</p></div>
           <div class="source-card reveal"><span class="license-badge license-danger">Do not copy</span><h3 class="mt-4">Real school photos</h3><p>Feza, Aga Khan, IST and Braeburn visuals are for style inspiration only unless written permission is granted.</p></div>
         </div>
@@ -113,7 +156,7 @@
         <div class="section-heading reveal">
           <span class="eyebrow">Curated source library</span>
           <h2>Image sources grouped by risk level.</h2>
-          <p>Use the filters to separate free placeholders, paid production assets and premium-school inspiration.</p>
+          <p>Use the filters to separate free profiles, paid production assets and premium-school inspiration.</p>
         </div>
         <div class="photo-library-tabs mt-10 reveal" data-photo-tabs>
           <button class="photo-tab active" data-photo-filter="all" type="button">All</button>
@@ -179,7 +222,7 @@
           <span class="eyebrow">Copy-ready photoshoot prompt</span>
           <h2 class="mt-3 font-display text-3xl font-bold text-slate-950">Give this to a photographer or image researcher.</h2>
           <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-start">
-            <p id="photoPrompt" class="prompt-box flex-1">Capture premium, authentic photos for Abela Pre & Primary School in Mkuranga, Pwani, Tanzania. Style: English-medium private school, clean uniforms, bright natural light, caring teachers, confident primary learners, parent trust, safe campus, reading culture, pre-primary play, classroom learning, sports and school life. Avoid AI-looking poses, over-editing, copied school photos, or images where permission from parents/school is unclear.</p>
+            <p id="photoPrompt" class="prompt-box flex-1">Capture premium, authentic photos for Abela Pre & Primary School in Mkuranga, Pwani, Tanzania. Style: English-medium private school, clean uniforms, bright natural light, caring teachers, confident primary learners, parent trust, safe campus, reading culture, pre-primary play, classroom learning, sports and school life. Avoid over-edited poses, copied school photos, or images where parent/school permission is unclear.</p>
             <button class="copy-button" type="button" data-copy-prompt="photoPrompt">Copy prompt</button>
           </div>
         </div>
@@ -203,17 +246,17 @@
       <a class="footer-link" href="about.html">About Abela</a>
       <a class="footer-link" href="academics.html">Academics</a>
       <a class="footer-link" href="teachers.html">Teachers</a>
-      <a class="footer-link" href="school-life.html">School Life</a>
+      <a class="footer-link" href="school-life.html">Life at Abela</a>
       <a class="footer-link" href="gallery.html">Gallery</a>
-      <a class="footer-link" href="photo-library.html">Photo Library</a>
+      <a class="footer-link" href="photo-library.html">Image Guide</a>
     </div>
     <div>
       <h3 class="footer-title">Admissions</h3>
       <a class="footer-link" href="admissions.html">How to Join</a>
       <a class="footer-link" href="fees.html">Fees Structure</a>
       <a class="footer-link" href="apply.html">Apply Online</a>
-      <a class="footer-link" href="portal.html">Parent Portal Demo</a>
-      <a class="footer-link" href="news.html">News & Updates</a>
+      <a class="footer-link" href="portal.html">Parent Access</a>
+      <a class="footer-link" href="news.html">News & Notices</a>
     </div>
     <div>
       <h3 class="footer-title">Contact</h3>
@@ -224,7 +267,7 @@
     </div>
   </div>
   <div class="border-t border-white/10 px-4 py-5 text-center text-xs text-slate-400">
-    © <span data-year></span> Abela Pre & Primary School. Version 3 frontend prototype ready for backend integration.
+    © <span data-year></span> Abela Pre & Primary School. Abela Pre & Primary School · Mkuranga, Pwani, Tanzania.
   </div>
 </footer>
 <button id="topBtn" class="top-button" type="button" aria-label="Scroll to top">↑</button>
